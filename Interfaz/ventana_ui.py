@@ -103,6 +103,8 @@ class Ui_MainWindow(object):
         self.menuEditar.setObjectName("menuEditar")
         self.menuAyuda = QtWidgets.QMenu(self.menubar)
         self.menuAyuda.setObjectName("menuAyuda")
+        self.menuM_s_informaci_n = QtWidgets.QMenu(self.menubar)
+        self.menuM_s_informaci_n.setObjectName("menuM_s_informaci_n")
         MainWindow.setMenuBar(self.menubar)
         self.actionNuevo = QtWidgets.QAction(MainWindow)
         self.actionNuevo.setObjectName("actionNuevo")
@@ -122,6 +124,8 @@ class Ui_MainWindow(object):
         self.actionAyuda.setObjectName("actionAyuda")
         self.actionAcerca_de = QtWidgets.QAction(MainWindow)
         self.actionAcerca_de.setObjectName("actionAcerca_de")
+        self.actionM_s_informaci_n = QtWidgets.QAction(MainWindow)
+        self.actionM_s_informaci_n.setObjectName("actionM_s_informaci_n")
         self.menuhola.addSeparator()
         self.menuhola.addAction(self.actionNuevo)
         self.menuhola.addAction(self.actionAbrir)
@@ -133,9 +137,11 @@ class Ui_MainWindow(object):
         self.menuEditar.addAction(self.actionPegar)
         self.menuAyuda.addAction(self.actionAyuda)
         self.menuAyuda.addAction(self.actionAcerca_de)
+        self.menuM_s_informaci_n.addAction(self.actionM_s_informaci_n)
         self.menubar.addAction(self.menuhola.menuAction())
         self.menubar.addAction(self.menuEditar.menuAction())
         self.menubar.addAction(self.menuAyuda.menuAction())
+        self.menubar.addAction(self.menuM_s_informaci_n.menuAction())
 
         self.retranslateUi(MainWindow)
         self.listWidget.setCurrentRow(-1)
@@ -158,6 +164,7 @@ class Ui_MainWindow(object):
         self.menuhola.setTitle(_translate("MainWindow", "Archivo"))
         self.menuEditar.setTitle(_translate("MainWindow", "Editar"))
         self.menuAyuda.setTitle(_translate("MainWindow", "Ayuda"))
+        self.menuM_s_informaci_n.setTitle(_translate("MainWindow", "Más información"))
         self.actionNuevo.setText(_translate("MainWindow", "Nuevo"))
         self.actionAbrir.setText(_translate("MainWindow", "Abrir"))
         self.actionGuardar.setText(_translate("MainWindow", "Guardar "))
@@ -167,6 +174,7 @@ class Ui_MainWindow(object):
         self.actionPegar.setText(_translate("MainWindow", "Pegar"))
         self.actionAyuda.setText(_translate("MainWindow", "Ayuda"))
         self.actionAcerca_de.setText(_translate("MainWindow", "Acerca de..."))
+        self.actionM_s_informaci_n.setText(_translate("MainWindow", "Más información"))
 
 
 if __name__ == "__main__":

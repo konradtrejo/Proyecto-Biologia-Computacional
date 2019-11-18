@@ -26,18 +26,17 @@ import matplotlib.pyplot as plt
 
 from Interfaz.MenuAyuda_ui  import Ui_MenuAyuda
 from Interfaz.MenuAcercaDe_ui import Ui_MenuAcercaDe
+from Interfaz.visor_animales import Ui_visor_animales
 
 class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
     def __init__(self,*args,**kwargs):
         QtWidgets.QMainWindow.__init__(self,*args,**kwargs)
         self.setupUi(self)
 
-        #self.label.setText("Haz click en el boton")
-        #self.pushButton.setText("Presioname")
-
         #evento del button
         self.actionAyuda.triggered.connect(self.ayuda)
         self.actionAcerca_de.triggered.connect(self.acercaDe)
+        self.actionM_s_informaci_n.triggered.connect(self.visorAnimales)
         self.pushButton.clicked.connect(self.actualizar)
         self.comboBox.currentTextChanged.connect(self.selectionchange)
         self.pushButton_2.clicked.connect(self.alinemiento_Multiple)
@@ -71,6 +70,17 @@ class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
        f.close()
        self.ui.textEdit.append(str(mensaje))
        self.mAcercaDe.show()
+    
+    def visorAnimales(self):
+       self.visorA=QtWidgets.QMainWindow()
+       self.ui = Ui_visor_animales()
+       self.ui.setupUi(self.visorA)
+       #f = open ('Interfaz/acercaDe.txt','r')
+       # mensaje = f.read()
+       #f.close()
+       # self.ui.textEdit.append(str(mensaje))
+       self.visorA.show()
+    
     
     def listar(self):
         with open('lista.csv') as File:  
