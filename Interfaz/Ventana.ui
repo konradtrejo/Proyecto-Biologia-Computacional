@@ -55,8 +55,7 @@ QPushButton
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Subir proteinas en formato fasta</string>
@@ -198,7 +197,7 @@ Comparación de especies y generación de árboles
       <x>460</x>
       <y>130</y>
       <width>311</width>
-      <height>171</height>
+      <height>271</height>
      </rect>
     </property>
     <property name="readOnly">

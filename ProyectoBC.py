@@ -9,7 +9,7 @@
 ###############################################################################
 
 
-from ventana_ui import *
+from  Interfaz.ventana_ui import *
 from Bio import AlignIO
 import csv
 from Bio import SeqIO
@@ -24,6 +24,8 @@ from Bio import Entrez
 import matplotlib
 import matplotlib.pyplot as plt
 
+from Interfaz.MenuAyuda_ui  import Ui_MenuAyuda
+from Interfaz.MenuAcercaDe_ui import Ui_MenuAcercaDe
 
 class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
     def __init__(self,*args,**kwargs):
@@ -34,6 +36,8 @@ class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
         #self.pushButton.setText("Presioname")
 
         #evento del button
+        self.actionAyuda.triggered.connect(self.ayuda)
+        self.actionAcerca_de.triggered.connect(self.acercaDe)
         self.pushButton.clicked.connect(self.actualizar)
         self.comboBox.currentTextChanged.connect(self.selectionchange)
         self.pushButton_2.clicked.connect(self.alinemiento_Multiple)
@@ -47,6 +51,27 @@ class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
         #self.elements_genes =[]
         #self.elements_protein = []
 
+    def ayuda(self):
+       self.mAyuda=QtWidgets.QMainWindow()
+       self.ui = Ui_MenuAyuda()
+       self.ui.setupUi(self.mAyuda)
+       
+       f = open ('Interfaz/ayuda.txt','r')
+       mensaje = f.read()
+       f.close()
+       self.ui.textEdit.append(str(mensaje))
+       self.mAyuda.show()
+    
+    def acercaDe(self):
+       self.mAcercaDe=QtWidgets.QMainWindow()
+       self.ui = Ui_MenuAcercaDe()
+       self.ui.setupUi(self.mAcercaDe)
+       f = open ('Interfaz/acercaDe.txt','r')
+       mensaje = f.read()
+       f.close()
+       self.ui.textEdit.append(str(mensaje))
+       self.mAcercaDe.show()
+    
     def listar(self):
         with open('lista.csv') as File:  
             reader = csv.reader(File, delimiter = ';')
@@ -108,7 +133,7 @@ class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
             self.textEdit.append("* Se cargaron los archivos FASTA")
             SeqIO.write(self.records,self.outputFilenameFasta,"fasta")
             fasta_name = self.outputFilenameFasta
-            self.textEdit.append("* Se creo el archivo "+ str(fasta_name) +", donde se encuentran todos los archivos FASTA a analizar", )
+            self.textEdit.append("* Se creo el archivo "+ str(fasta_name) +", donde se encuentran todos los archivos FASTA a analizar ," )
             clustalw_exe = "clustalw\clustalw2.exe"
             clustalw_cline = ClustalwCommandline(clustalw_exe, infile=self.outputFilenameFasta)
             self.textEdit.append("* Se procede a realizar el alineamiento con ClustalW")

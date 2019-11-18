@@ -45,8 +45,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(40, 330, 221, 23))
-        self.pushButton.setStyleSheet("\n"
-"")
+        self.pushButton.setStyleSheet("")
         self.pushButton.setFlat(False)
         self.pushButton.setObjectName("pushButton")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -80,7 +79,7 @@ class Ui_MainWindow(object):
         self.listWidget.setObjectName("listWidget")
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setEnabled(True)
-        self.textEdit.setGeometry(QtCore.QRect(460, 130, 311, 171))
+        self.textEdit.setGeometry(QtCore.QRect(460, 130, 311, 271))
         self.textEdit.setReadOnly(True)
         self.textEdit.setObjectName("textEdit")
         self.label_2.raise_()
