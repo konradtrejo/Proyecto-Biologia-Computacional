@@ -11,21 +11,15 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Proyecto Arboles Filogeneticos</string>
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-
-	
 	font: 16pt &quot;Pristina&quot;;
-
 }
 
 QLabel#label_2{
-	
-	
 	font: 87 italic 11pt &quot;Segoe UI Black&quot;;
-
 }
 
 
@@ -44,7 +38,6 @@ background-color: rgb(218, 218, 163);
 
 QPushButton
 {
-	
 	border-color: rgb(28, 195, 255);
 	alternate-background-color: rgb(53, 53, 53);
 	background-color: rgb(61, 123, 184);

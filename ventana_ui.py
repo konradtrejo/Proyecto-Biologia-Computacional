@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ventana.ui'
+# Form implementation generated from reading ui file 'Ventana.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
@@ -13,17 +13,11 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(799, 600)
         MainWindow.setStyleSheet("*{\n"
-"\n"
-"    \n"
 "    font: 16pt \"Pristina\";\n"
-"\n"
 "}\n"
 "\n"
 "QLabel#label_2{\n"
-"    \n"
-"    \n"
 "    font: 87 italic 11pt \"Segoe UI Black\";\n"
-"\n"
 "}\n"
 "\n"
 "\n"
@@ -42,7 +36,6 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton\n"
 "{\n"
-"    \n"
 "    border-color: rgb(28, 195, 255);\n"
 "    alternate-background-color: rgb(53, 53, 53);\n"
 "    background-color: rgb(61, 123, 184);\n"
@@ -151,7 +144,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Proyecto Arboles Filogeneticos"))
         self.pushButton.setText(_translate("MainWindow", "Subir proteinas en formato fasta"))
         self.label_2.setText(_translate("MainWindow", "\n"
 "Comparación de especies y generación de árboles \n"

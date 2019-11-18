@@ -1,14 +1,17 @@
-"Lama glama (Llama)"
-"Vicugna vicugna (VicuÃ±a)"
-"Vicugna pacos (Alpaca)"
-"Lama guanicoe (Guanaco)"
-"Leopardus jacobitus (Gato andino)",
-"Leopardus colocolo (Gato del pajonal)"
-"Leopardus pardalis (Ocelote)"
-"Leopardus tigrinus (Tigrino)"
-"Puma concolor (Puma)"
-"Puma yagouaroundi (Yahuarundi)"
-"Panthera onca (Jaguar)"
-"Acinonyx jubatus (Guepardo o Chita)"
-"Panthera pardus (Leopardo)"
-"Camelus dromedarius (Dromedario)"
+Lama glama (Llama);NC_012102.1
+Vicugna vicugna (Vicuña);NC_013558.1
+Vicugna pacos (Alpaca);NC_002504.1
+Lama guanicoe (Guanaco);NC_011822.1
+Leopardus jacobitus (Gato andino);NC_028322.1
+Leopardus colocolo (Gato del pajonal);NC_028314.1
+Leopardus pardalis (Ocelote);NC_028315.1
+Leopardus tigrinus (Tigrino);NC_028317.1
+Puma concolor (Puma);NC_016470.1
+Puma yagouaroundi (Yahuarundi);NC_028311.1
+Panthera onca (Jaguar);NC_022842.1
+Acinonyx jubatus (Guepardo o Chita);NC_005212.1
+Panthera pardus (Leopardo);NC_010641.1
+Camelus dromedarius (Dromedario);NC_009849.1
+Panthera leo (León);NC_028302.1
+Leopardus wiedii;NC_028318.1
+Leptailurus serval (Serval);NC_028316.1
