@@ -3,11 +3,15 @@ Realización de árbol filogenético de especies del Perú.
 -----------------------------------------------------------------------------------------------------------
 ## Pasos a seguir 
 
- en la cmd o la terminal linux ingrese el comando
+ En la cmd (Anaconda Prompt con Spyder) o en la terminal linux ingrese el comando:
  
- #### pyuic5 -x  Ventana.ui -o ventana_ui.py
+```{r, engine='shell', count_lines}
+pyuic5 -x  Ventana.ui -o ventana_ui.py
+```
  
- con eso ya podra ejecutarse el script 
+ Con eso ya podra ejecutarse el script principal:
  
- #### python ProyectoBC.py
-
+```{r, engine='shell', count_lines}
+python ProyectoBC.py
+```
+ 
