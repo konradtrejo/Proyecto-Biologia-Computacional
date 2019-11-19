@@ -1,0 +1,15 @@
+Para la ejecución del programa "ProyectoBC.py" se debe tener instalado Spyder, ya que contiene la mayoría de librerías que se van a utilizar, de lo contrario se deberán instalar manualmente.
+
+
+Pasos para la ejecución:
+* Ejecutar el programa en la consola (Anaconda Prompt o terminal de Linux):
+	python ProyectoBC.py
+* Seleccionar "Genes" para ver el nombre del gen (no tiene utilidad)
+* Seleccionar "Especies"
+* Verificar cuales son los animales que se van a analizar.
+* Presionar el botón "Realizar alineamiento múltiple" y verificar los mensajes en el panel derecho.
+* Realizado el alineamiento múltiple, recién se puede realizar el árbol filogenético, de lo contrario no se podrá.
+* Verificar los mensajes en el panel derecho.
+* Aparecerá en otra ventana el árbol filogenético.
+
+* Presionar en "Ayuda" y "Ayuda" para poder ver algunos conceptos.
