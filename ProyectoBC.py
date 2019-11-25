@@ -41,6 +41,7 @@ class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
         self.comboBox.currentTextChanged.connect(self.selectionchange)
         self.pushButton_2.clicked.connect(self.alinemiento_Multiple)
         self.pushButton_3.clicked.connect(self.arbol_filogenetico)
+        self.pushButton_4.clicked.connect(self.removeSel)
         self.elements_especies = []
         self.tabla_accession = []
         self.records = []
@@ -128,17 +129,25 @@ class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
             return animal
 
             
+    def buscar_todos(self,name):
+        for nombre in self.elements_especies:
+            if(nombre in name):
+                return 1
+        return 0
+    
     def alinemiento_Multiple(self):
         if str(self.comboBox.currentText())=="Especies":
             for filename in os.listdir("Fastas/Camelidae/Genes"):
-                handle = open("Fastas/Camelidae/Genes"+"/"+filename)
-                record =SeqIO.read(handle,"fasta")
-                self.records.append(record)
+                if(self.buscar_todos(filename)==1):
+                    handle = open("Fastas/Camelidae/Genes"+"/"+filename)
+                    record =SeqIO.read(handle,"fasta")
+                    self.records.append(record)
             
             for filename in os.listdir("Fastas/Felidae/Genes/CYTB"):
-                handle = open("Fastas/Felidae/Genes/CYTB"+"/"+filename)
-                record =SeqIO.read(handle,"fasta")
-                self.records.append(record)
+                if(self.buscar_todos(filename)==1):
+                    handle = open("Fastas/Felidae/Genes/CYTB"+"/"+filename)
+                    record =SeqIO.read(handle,"fasta")
+                    self.records.append(record)
             
             self.textEdit.append("* Se cargaron los archivos FASTA")
             SeqIO.write(self.records,self.outputFilenameFasta,"fasta")
@@ -177,7 +186,20 @@ class MainWindows(QtWidgets.QMainWindow,Ui_MainWindow):
         Phylo.draw(new_tree, axes=axes)
         self.textEdit.append("* Ahora puede visualizarlo mejor")
 
+    def removeSel(self):
+        listItems=self.listWidget.selectedItems()
+        if not listItems: return        
+        for item in listItems:
+            #self.textEdit.append("Removido "+item.text())
+            nombre=item.text()
+            lugar = self.elements_especies.index(nombre)
+            self.elements_especies.remove(nombre)
+            self.tabla_accession.pop(lugar)
+            print(self.elements_especies)
+            self.textEdit.append("Removido "+item.text())
+            self.listWidget.takeItem(self.listWidget.row(item))
 
+            #print (type(item), dir(item))
 
 if __name__=="__main__":
     
